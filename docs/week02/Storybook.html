@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Storybook for the Web Engineering Module</title>
+
+    <style>
+        html {
+            font-size: 16px;
+            padding: 0.5rem;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.2;
+            color: black;
+        }
+
+        .module-header {
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 0.5em;
+        }
+
+        .date-table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 1em;
+            text-align: left;
+        }
+
+        .date-table th {
+            font-size: 1.2rem;
+            border: 1px solid black;
+            padding: 0.5em;
+            background: lightgray;
+        }
+
+        .date-table td {
+            border: 1px solid black;
+            padding: 0.5em;
+            text-align: left;
+        }
+
+        .date-table tr.important-date td {
+            background: rgba(240, 128, 128, 0.5);
+        }
+
+        .date-table tr:nth-child(even) {
+            background: rgba(173, 216, 230, 0.5);
+        }
+
+        .date-table caption {
+            text-align: left;
+            padding-bottom: 1em;
+        }
+
+        .effort-summary {
+            background-color: #f9f9f9; /* Leichter grauer Hintergrund */
+            padding: 1.5rem; /* Genügend Innenabstand */
+            margin-top: 0.7rem; /* Abstand nach oben */
+            border: 1px solid #ddd; /* Dünner grauer Rahmen um den gesamten Bereich */
+            border-left: 4px solid #007bff; /* Blaue linke Linie zur Hervorhebung */
+            border-radius: 5px;
+            font-size: 1rem; /* Schriftgröße beibehalten */
+            line-height: 1.6; /* Erhöhte Zeilenhöhe für bessere Lesbarkeit */
+        }
+
+        .effort-summary h2 {
+            font-size: 1.5rem; /* Größere Schriftgröße für die Überschrift */
+            margin-bottom: 1rem; /* Abstand zur nächsten Zeile */
+            color: #007bff; /* Blaue Farbe für die Überschrift */
+        }
+
+        .effort-summary p {
+            margin-bottom: 0.8rem; /* Abstand zwischen den Absätzen */
+        }
+
+        #criteria {
+            background-color: #f7f7f7; /* Sehr heller Hintergrund für Kontrast */
+            padding: 1.5rem; /* Innenabstand für eine saubere Struktur */
+            margin-top: 1.5rem; /* Abstand nach oben, um es von anderen Abschnitten zu trennen */
+            border: 1px solid #ddd; /* Dünner grauer Rahmen um den gesamten Bereich */
+            border-left: 4px solid #dc3545;
+            border-radius: 5px; /* Leicht abgerundete Ecken */
+            font-size: 1rem; /* Standard-Schriftgröße */
+        }
+
+        #criteria h2 {
+            font-size: 1.5rem; /* Größere Überschrift für Klarheit */
+            color: #dc3545; /* Rot, um den Abschnitt hervorzuheben */
+            margin-bottom: 1rem; /* Abstand zur nächsten Zeile */
+        }
+
+        #criteria ul {
+            padding-left: 1.5rem; /* Einrückung für die Liste */
+            margin-bottom: 1rem; /* Abstand zur nächsten Zeile */
+        }
+
+        #criteria li {
+            margin-bottom: 0.5rem; /* Abstand zwischen den Listenpunkten */
+        }
+
+        #criteria p {
+            font-size: 1rem; /* Standardgröße */
+            margin-top: 1rem; /* Abstand zwischen den Absätzen */
+            line-height: 1.5; /* Erhöhte Zeilenhöhe für bessere Lesbarkeit */
+        }
+
+
+        .contact-footer {
+            background-color: #f1f1f1; /* Hellgrauer Hintergrund */
+            margin-top: 0.2rem;
+            padding: 1rem; /* Innenabstand für den Footer */
+            text-align: center; /* Zentriert den Text im Footer */
+            font-size: 0.9rem; /* Leicht kleinere Schriftgröße als im Hauptinhalt */
+            border-radius: 5px;
+            border: 2px solid #ccc; /* Dezente obere Begrenzungslinie */
+        }
+
+        .contact-footer a {
+            color: #007bff; /* Blaue Linkfarbe */
+            text-decoration: none; /* Entfernt die Unterstreichung */
+            font-weight: bold; /* Hebt den Link hervor */
+        }
+
+        .contact-footer a:hover {
+            text-decoration: underline; /* Fügt eine Unterstreichung hinzu, wenn der Benutzer über den Link fährt */
+        }
+
+        .contact-footer address {
+            margin: 0; /* Entfernt den Standard-Außenabstand des address-Tags */
+        }
+    </style>
+
+</head>
+
+<body>
+<header class="module-header">
+    <dfn title="Drehbuch">Storybook</dfn> for the Web Engineering Module
+</header>
+
+<main>
+    <section id="context">
+        <h1>Module delivery mode</h1>
+        <p> This installment of the <dfn title="WebEngineering">webeC</dfn> module.</p>
+    </section>
+
+    <section id="content">
+        <h1>Delivery dates and examination details</h1>
+        <article>
+            <h2>Overview</h2>
+            <table class="date-table">
+                <caption>In the following the dates and topic of the module webeC</caption>
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Topic</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Mi, 18.09.24</td>
+                    <td>HTML</td>
+                </tr>
+                <tr>
+                    <td>Mi, 25.09.24</td>
+                    <td>CSS</td>
+                </tr>
+                <tr>
+                    <td>Mi, 02.10.24</td>
+                    <td>Grails, Web, MVC, Test</td>
+                </tr>
+                <tr>
+                    <td>Mi, 09.10.24</td>
+                    <td>GSP, Template, Taglib, Layout</td>
+                </tr>
+                <tr>
+                    <td>Mi, 16.10.24</td>
+                    <td>Persistence, DB-Access</td>
+                </tr>
+                <tr>
+                    <td>Mi, 23.10.24</td>
+                    <td>Simple Security</td>
+                </tr>
+                <tr>
+                    <td>Mi, 30.10.24</td>
+                    <td>REST, Services</td>
+                </tr>
+                <tr class="important-date">
+                    <td>Mi, 06.11.24</td>
+                    <td>ANWESENHEITSPLICHT! Übungsvorbereitung</td>
+                </tr>
+                <tr>
+                    <td>Mi, 13.11.24</td>
+                    <td>Javascript</td>
+                </tr>
+                <tr>
+                    <td>Mi, 20.11.24</td>
+                    <td>Responsive / Mobile Web</td>
+                </tr>
+                <tr>
+                    <td>Mi, 04.12.24</td>
+                    <td>Übungsanlass</td>
+                </tr>
+                <tr>
+                    <td>Mi, 11.12.24</td>
+                    <td>Übungsanlass</td>
+                </tr>
+                <tr class="important-date">
+                    <td>Mi, 18.12.24</td>
+                    <td>WICHTIG! Übungsabgabe</td>
+                </tr>
+                <tr>
+                    <td>Mi, 08.01.25</td>
+                    <td>Deployment</td>
+                </tr>
+                <tr>
+                    <td>Mi, 15.01.25</td>
+                    <td>Prüfungsvorbereitung</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article class="effort-summary">
+            <h2> Total Effort</h2>
+            <p> Classroom lectures add up to <code>15 * 3h = 45h</code>.</p>
+            <p> Prework and afterwork, including homework adds up to <code>15 * 1h = 15h</code>.</p>
+            <p> The exercise for the continuous assessment grade takes <code>4 * 5h = 20h</code>.</p>
+            <p> Preparation for the final exam will take approximately <code>8h</code>.</p>
+            <p> Writing the final exam takes <code>2h</code>.</p>
+            <p> This makes a total of <code>90h</code>.</p>
+        </article>
+
+        <article id="criteria">
+            <h2> Passing criteria </h2>
+            <ul>
+                <li>You have to attend the exercise preparation event.</li>
+                <li>You have to do the exercise and deliver before the deadline.</li>
+                <li>You have to attend the <dfn title="Modulschlussprüfung">final exam (MSP)</dfn>.</li>
+            </ul>
+            <p> Your exercise will determine your <abbr title="Erfahrungsnote">continuous assessment grade (EN)</abbr>.
+            </p>
+            <p> EN and MSP together make your final grade. </p>
+        </article>
+
+    </section>
+</main>
+
+<footer class="contact-footer">
+    <address> Fatlum Cikaqi, Brugg 5200, <a href="mailto:fatlum.cikaqi@students.fhnw.ch">fatlum.cikaqi@students.fhnw.ch</a> </address>
+</footer>
+
+</body>
+
+</html>
